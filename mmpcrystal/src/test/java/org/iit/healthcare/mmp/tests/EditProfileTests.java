@@ -23,6 +23,20 @@ public class EditProfileTests extends BaseClass{
 		String expectedFName="ria1";
 		Assert.assertEquals(actualFName, expectedFName);
 	}
+	
+	@Test
+	public void validateEditLastName()
+	{
+		MMPLibrary mmpLib = new MMPLibrary(driver);
+
+		mmpLib.launchBrowser(prop.getProperty("url"));
+		mmpLib.login(prop.getProperty("patient_username"),prop.getProperty("patient_password"));
+		mmpLib.navigateToAPatientModule("Profile");
+		EditProfilePage editProjObj = new EditProfilePage(driver);
+		String actualFName = editProjObj.editAllFields();
+		String expectedFName="ria1";
+		Assert.assertEquals(actualFName, expectedFName);
+	}
 
 
 
