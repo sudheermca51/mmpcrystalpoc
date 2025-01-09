@@ -5,7 +5,7 @@
 	<parameter name="doctor" value="Charlie" />
 	<parameter name="specialization" value="Cardiologist" />
 	<parameter name="time" value="12pm" />
-	<parameter name="days" value="90" />
+	<parameter name="days" value="80" />
 	<parameter name="dateformat" value="dd/MM/YYYY" />
 	<parameter name="symptoms" value="fever" />
 	
