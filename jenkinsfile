@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('mmp_health_check') {
+            steps {
+                bat 'ping 85.209.95.122 -n 5'
+            }
+        }
+		 stage('download_git_repo') {
+            steps {
+               git branch: 'main', url: 'https://github.com/sudheermca51/mmpcrystalpoc.git'
+            }
+        }
+		 stage('execute_selenium_tests') {
+            steps {
+               dir('mmpcrystal') 
+			   {
+					bat 'mvn clean test' 
+			   }
+            }
+        }
+    }
+}
