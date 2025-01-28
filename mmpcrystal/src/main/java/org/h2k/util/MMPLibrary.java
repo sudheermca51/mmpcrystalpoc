@@ -18,7 +18,7 @@ public class MMPLibrary {
 		
 		driver.findElement(By.id("username")).sendKeys(username+"");
 		driver.findElement(By.id("password")).sendKeys(password);
-		driver.findElement(By.name("submit")).click();
+		driver.findElement(By.xpath("//input[@value='Sign In']")).click();
 
 	}
 	public void launchBrowser(String url )
